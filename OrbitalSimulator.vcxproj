@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{f1e52473-1d09-448d-bdba-28dfe55db99e}</ProjectGuid>
-    <RootNamespace>Lab07</RootNamespace>
+    <RootNamespace>OrbitalSimulator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,7 +142,7 @@
     <ClCompile Include="CrewDragon.cpp" />
     <ClCompile Include="Earth.cpp" />
     <ClCompile Include="Hubble.cpp" />
-    <ClCompile Include="Lab07.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Parts.cpp" />
     <ClCompile Include="Position.cpp" />
     <ClCompile Include="Satellite.cpp" />

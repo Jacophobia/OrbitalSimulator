@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #include "Sputnik.h"
 #include "Fragment.h"
 

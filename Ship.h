@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #pragma once
 
 #include "Pipe.h" // for custom pipe data structure

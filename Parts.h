@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #pragma once
 
 #include "Satellite.h"
@@ -27,13 +31,13 @@ public:
 	}
 
 	// per-frame operation
-	void draw()
+	void draw() override
 	{
 		drawGPSCenter(getPosition(), getAngle());
 	}
 
 	// on collision
-	std::vector<std::shared_ptr<Satellite>> explode();
+	std::vector<std::shared_ptr<Satellite>> explode() override;
 private:
 };
 
@@ -49,7 +53,7 @@ public:
 	{
 		setRadius(1024000);
 	}
-		void draw()
+	void draw() override
 	{
 		drawGPSLeft(getPosition(), Position(), getAngle()); // offset
 	}
@@ -67,7 +71,7 @@ public:
 	{
 		setRadius(1024000);
 	}
-		void draw()
+	void draw() override
 	{
 		drawGPSRight(getPosition(), Position(), getAngle()); // offset
 	}
@@ -81,11 +85,11 @@ public:
 	{
 		setRadius(1280000);
 	}
-		void draw()
+	void draw() override
 	{
 		drawHubbleTelescope(getPosition(), Position(), getAngle()); // offset
 	}
-	std::vector<std::shared_ptr<Satellite>> explode();
+	std::vector<std::shared_ptr<Satellite>> explode() override;
 };
 
 class HubbleComputer : public Part
@@ -96,11 +100,11 @@ public:
 	{
 		setRadius(896000);
 	}
-		void draw()
+	void draw() override
 	{
 		drawHubbleComputer(getPosition(), Position(), getAngle()); // offset
 	}
-	std::vector<std::shared_ptr<Satellite>> explode();
+	std::vector<std::shared_ptr<Satellite>> explode() override;
 };
 
 class HubbleLeft : public Part
@@ -111,11 +115,11 @@ public:
 	{
 		setRadius(1024000);
 	}
-		void draw()
+	void draw() override
 	{
 		drawHubbleLeft(getPosition(), Position(), getAngle()); // offset
 	}
-	std::vector<std::shared_ptr<Satellite>> explode();
+	std::vector<std::shared_ptr<Satellite>> explode() override;
 };
 
 class HubbleRight : public Part
@@ -126,11 +130,11 @@ public:
 	{
 		setRadius(1024000);
 	}
-		void draw()
+	void draw() override
 	{
 		drawHubbleRight(getPosition(), Position(), getAngle());
 	}
-	std::vector<std::shared_ptr<Satellite>> explode();
+	std::vector<std::shared_ptr<Satellite>> explode() override;
 };
 
 class CrewDragonCenter : public Part
@@ -141,11 +145,11 @@ public:
 	{
 		setRadius(768000);
 	}
-		void draw()
+	void draw() override
 	{
 		drawCrewDragonCenter(getPosition(), getAngle());
 	}
-	std::vector<std::shared_ptr<Satellite>> explode();
+	std::vector<std::shared_ptr<Satellite>> explode() override;
 };
 
 class CrewDragonLeft : public Part
@@ -156,11 +160,11 @@ public:
 	{
 		setRadius(768000);
 	}
-		void draw()
+	void draw() override
 	{
 		drawCrewDragonLeft(getPosition(), Position(), getAngle()); // offset
 	}
-	std::vector<std::shared_ptr<Satellite>> explode();
+	std::vector<std::shared_ptr<Satellite>> explode() override;
 };
 
 class CrewDragonRight : public Part
@@ -171,11 +175,11 @@ public:
 	{
 		setRadius(768000);
 	}
-		void draw()
+	void draw() override
 	{
 		drawCrewDragonRight(getPosition(), Position(), getAngle()); // offset
 	}
-	std::vector<std::shared_ptr<Satellite>> explode();
+	std::vector<std::shared_ptr<Satellite>> explode() override;
 };
 
 class StarlinkBody : public Part
@@ -186,11 +190,11 @@ public:
 	{
 		setRadius(256000);
 	}
-		void draw()
+	void draw() override
 	{
 		drawStarlinkBody(getPosition(), Position(), getAngle()); // offset
 	}
-	std::vector<std::shared_ptr<Satellite>> explode();
+	std::vector<std::shared_ptr<Satellite>> explode() override;
 };
 
 class StarlinkArray : public Part
@@ -201,9 +205,9 @@ public:
 	{
 		setRadius(512000);
 	}
-		void draw()
+	void draw() override
 	{
 		drawStarlinkArray(getPosition(), Position(), getAngle()); // offset
 	}
-	std::vector<std::shared_ptr<Satellite>> explode();
+	std::vector<std::shared_ptr<Satellite>> explode() override;
 };

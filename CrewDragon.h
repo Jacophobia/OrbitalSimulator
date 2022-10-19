@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #pragma once
 #include "Satellite.h"
 
@@ -15,10 +19,11 @@ public:
         setRadius(896000);
     }
     // per-frame operations
-    void draw() {
+    void draw() override
+    {
         drawCrewDragon(getPosition(), getAngle());
     }
     // on collision
-    std::vector<std::shared_ptr<Satellite>> explode();
+    std::vector<std::shared_ptr<Satellite>> explode() override;
 };
 

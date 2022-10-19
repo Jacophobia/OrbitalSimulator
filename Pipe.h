@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #pragma once
 
 #include <queue>
@@ -14,7 +18,7 @@ public:
 	// constructors
 	Pipe() = delete;
 	Pipe(const Pipe& rhs) = delete;
-	Pipe(const Pipe&& rhs) = delete;
+	Pipe(Pipe&& rhs) = delete;
 
 	// v v v nested classes v v v
 
@@ -33,15 +37,16 @@ public:
 
 		// copy / move
 		In(const In& rhs) : queue(rhs.queue) {}
-		In(const In&& rhs) : queue(rhs.queue) {}
+		In(In&& rhs) noexcept : queue(std::move(rhs.queue)) {}
 		In& operator=(const In& rhs)
 		{
 			queue = rhs.queue;
 			return *this;
 		}
-		In& operator=(const In&& rhs)
+		In& operator=(In&& rhs) noexcept
 		{
 			queue = std::move(rhs.queue);
+			return *this;
 		}
 
 		// load pipe
@@ -75,17 +80,16 @@ public:
 		
 		// copy / move
 		Out(const Out& rhs) : queue(rhs.queue) {}
-		Out(const Out&& rhs) : queue(rhs.queue) {}
+		Out(Out&& rhs) noexcept : queue(std::move(rhs.queue)) {}
 		Out& operator=(const Out& rhs)
 		{
 			queue = rhs.queue;
 			return *this;
 		}
-		Out& operator=(const Out&& rhs)
+		Out& operator=(Out&& rhs) noexcept
 		{
-			queue = rhs.queue;
-			for (size_t i = 0; i < rhs.queue->size(); i++)
-				rhs.queue->pop();
+			queue = std::move(rhs.queue);
+			return *this;
 		}
 
 		// unload pipe

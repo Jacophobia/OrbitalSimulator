@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #include "Hubble.h"
 #include "Parts.h"
 

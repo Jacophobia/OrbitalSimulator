@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #include "Earth.h"
 
 #include "Physics.h"

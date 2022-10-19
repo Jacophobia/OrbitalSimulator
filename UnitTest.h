@@ -1,16 +1,15 @@
-/*
- * Author: Jacob Morgan
- * Since: 06/17/2022
- */
+/// 
+/// Author: Jacob Morgan
+/// Since: 06/17/2022
+/// 
 
 #pragma once
 
-#include <string>
-#include <iostream>
-#include <vector>
-#include <tuple>
-#include <algorithm>
 #include <cmath>
+#include <iostream>
+#include <string>
+#include <tuple>
+#include <vector>
 
 static double testsCompleted = 0.0;
 static double testsPassed = 0.0;
@@ -54,7 +53,8 @@ static void __print_report(std::string testName)
 		}
 		std::cout << "\tFailed assertion at line " << std::get<2>(value) << ". Cause: " << std::get<0>(value) << std::endl;
 	}
-	std::cout << testsCompleted << " tests completed, " << (testsPassed / testsCompleted) * 100.0 << "% passed" << std::endl;
+	std::cout << testsCompleted << " tests completed, "
+		<< (testsPassed / testsCompleted) * 100.0 << "% passed" << std::endl;
 }
 
 static void reset_report()

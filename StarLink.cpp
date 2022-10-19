@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #include "StarLink.h"
 #include "Fragment.h"
 

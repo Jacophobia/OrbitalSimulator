@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #pragma once
 
 #include "Satellite.h"
@@ -25,7 +29,7 @@ public:
 	* UPDATE
 	* Updates position, velocity, angle, and timeAlive
 	*****************************************/
-	void update(double time, const Earth& earth)
+	void update(double time, const Earth& earth) override
 	{
 		Satellite::update(time, earth);
 		timeAlive -= time;
@@ -35,7 +39,7 @@ public:
 	* DRAW
 	* Draws a bullet
 	*****************************************/
-	void draw()
+	void draw() override
 	{
 		drawProjectile(position);
 	}
@@ -45,12 +49,12 @@ public:
 	* Returns whether fragment has fizzled, either by colliding with earth or
 	* running out of time
 	*****************************************/
-	bool hasFizzled(const Earth& earth)
+	bool hasFizzled(const Earth& earth) override
 	{
 		return Satellite::hasFizzled(earth) || timeAlive <= 0.0;
 	}
 
-	std::vector<std::shared_ptr<Satellite>> explode()
+	std::vector<std::shared_ptr<Satellite>> explode() override
 	{
 		return { };
 	}

@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #include "Simulator.h"
 
 #include <cassert>

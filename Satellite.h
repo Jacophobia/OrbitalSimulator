@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #pragma once
 
 #include "Velocity.h"
@@ -8,7 +12,7 @@
 #include <vector>
 
 /*********************************************
- * Position
+ * Satellite / Orbital Body
  * An object orbiting Earth. Is a GPS satellite by default
  *********************************************/
 class Satellite
@@ -25,13 +29,10 @@ public:
 	bool hasCollidedWith(const Position& pos, double radius);
 	bool hasCollidedWith(const Satellite& rhs);
 
-	//private getters
+	// private getters
 	const Position& getPosition() const { return position; }
 
-	/******************************************
-	* DRAW
-	* Draws a GPS Satellite
-	*****************************************/
+	// draw to the screen
 	virtual void draw()
 	{
 		drawGPS(position, getAngle());

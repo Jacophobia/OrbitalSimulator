@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #include "Satellite.h"
 
 #include "Physics.h"

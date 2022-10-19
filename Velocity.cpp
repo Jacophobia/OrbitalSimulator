@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #include "Velocity.h"
 
 #include "Acceleration.h"

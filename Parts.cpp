@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #include "Parts.h"
 
 #include "Fragment.h"

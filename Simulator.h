@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #pragma once
 
 #include "uiDraw.h"        // for RANDOM and DRAW*

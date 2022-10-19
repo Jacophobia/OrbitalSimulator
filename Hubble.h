@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 #pragma once
 #include "Satellite.h"
 
@@ -16,11 +20,12 @@ public:
     }
 
     // per-frame operation
-    void draw() {
+    void draw() override
+    {
         drawHubble(getPosition(), getAngle());
     }
 
     // on collision
-    std::vector<std::shared_ptr<Satellite>> explode();
+    std::vector<std::shared_ptr<Satellite>> explode() override;
 };
 

@@ -1,3 +1,7 @@
+///
+/// Author: Jacob Morgan
+///
+
 /***********************************************************************
  * Source File:
  *    Point : The representation of a position on the screen
